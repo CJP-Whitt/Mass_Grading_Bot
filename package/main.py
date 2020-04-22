@@ -6,6 +6,7 @@
 # This program is a mass grader used for google classroom in giving the same grade to all students on a given
 # assignment. Uses PyQt5, Selenium, and Chrome Driver.
 # **********************************************************************************************************
+import sys
 from package.massGradingBotApp import *
 
 def main(resource_dir):

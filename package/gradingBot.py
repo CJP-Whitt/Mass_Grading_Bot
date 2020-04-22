@@ -1,18 +1,30 @@
-import sys
 import os
-from selenium import webdriver
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.keys import Keys
-
+from package.HiddenChromeService import HiddenChromeWebDriver
+from package.utils import is_frozen, frozen_temp_path
 
 
 sleep_time = 3
-executable_path = '../driver/chromedriver.exe'
 
-class gradingBot():
+chrome_driver_str = 'chromedriver.exe'
+
+if is_frozen:
+    basedir = frozen_temp_path
+    driver_dir = os.path.join(basedir, 'driver')
+else:
+    basedir = os.path.dirname(os.path.abspath(__file__))
+    driver_dir = os.path.join(basedir, '..\\driver')
+
+
+class gradingBot:
     def __init__(self):
-        self.driver = webdriver.Chrome(self.resource_path(executable_path))
+        chromedriver = open(os.path.join(driver_dir, chrome_driver_str))
+        print(chromedriver.name)
+        self.driver = HiddenChromeWebDriver(chromedriver.name)
+        # self.driver = webdriver.Chrome(chromedriver.name)
         self.actions = ActionChains(self.driver)
+
 
     def login(self):
         self.driver.get("https://accounts.google.com/signin/v2/identifier?service=classroom&passive=1209600&continue"
@@ -40,13 +52,6 @@ class gradingBot():
         for i in range(0, len(boxes)):
             boxes[i].click()
             self.actions.perform()
-
-    def resource_path(self, relative_path):
-        try:
-            base_path = sys._MEIPASS
-        except Exception:
-            base_path = os.path.dirname(__file__)
-        return os.path.join(base_path, relative_path)
 
 
 
