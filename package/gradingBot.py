@@ -7,14 +7,14 @@ from package.utils import is_frozen, frozen_temp_path
 
 sleep_time = 3
 
-chrome_driver_str = 'chromedriver.exe'
+chrome_driver_str = 'chromedriver'
 
 if is_frozen:
     basedir = frozen_temp_path
     driver_dir = os.path.join(basedir, 'driver')
 else:
     basedir = os.path.dirname(os.path.abspath(__file__))
-    driver_dir = os.path.join(basedir, '..\\driver')
+    driver_dir = os.path.join(basedir, '../driver')
 
 
 class gradingBot:

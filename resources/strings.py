@@ -1,5 +1,5 @@
 # Intro
-intro_msg1 = "Hello, I am the Mass Grading Bot. I will assist you in doing mass input grading within google " \
+intro_msg1 = "I am the Mass Grading Bot. I will assist you in doing mass input grading within google " \
              "classroom.\n\n\nTo get started hit the next button below and a new Google Chrome window will open."
 
 # Login

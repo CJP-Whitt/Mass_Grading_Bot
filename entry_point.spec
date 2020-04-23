@@ -11,12 +11,11 @@ def get_resources():
         data_files.append((os.path.join('resources', file_name), 'resources'))
     return data_files
 
-added_datas = [('.\\resources', '.')]
-added_binaries = [('.\\driver\\chromedriver.exe', '.\\driver')]
+added_binaries = [('./driver/chromedriver', './driver')]
 
 
 a = Analysis(['entry_point.py'],
-             pathex=['C:\\Users\\Whitt\\PycharmProjects\\GoogleClassroomAutoGrade'],
+             pathex=['/Users/CAS/Downloads/Mass Grading Bot'],
              binaries=added_binaries,
              datas=get_resources(),
              hiddenimports=[],
@@ -43,3 +42,7 @@ exe = EXE(pyz,
           upx_exclude=[],
           runtime_tmpdir=None,
           console=False )
+app = BUNDLE(exe,
+             name='entry_point.app',
+             icon=None,
+             bundle_identifier=None)
