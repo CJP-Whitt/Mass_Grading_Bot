@@ -1,4 +1,4 @@
-# Mass-Grading-Bot
+# Mass_Grading_Bot
 A mass input grading bot made for Google Classroom. 
 
 Uses Chrome Driver, Selenium, and PyQt5
