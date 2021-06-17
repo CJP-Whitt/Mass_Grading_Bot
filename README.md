@@ -9,4 +9,4 @@ Requires Chrome browser Version 81.0.4044.122 or higher.
 
 
 
-Windows installer available at: https://drive.google.com/open?id=1j8z6Ji2fQG7vq2U5lVplZZcjCkyS7ygn
+Windows installer available at: https://drive.google.com/file/d/1TLdhOGwJvYkLPGJPMOzSvYuZalZNx_My/view?usp=sharing
