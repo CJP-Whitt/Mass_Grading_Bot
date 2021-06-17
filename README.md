@@ -1,6 +1,6 @@
 # Mass_Grading_Bot
 
-### (Warning: Depreciated, Google Classroom now supports mass grading functionality)
+### *(Warning: Depreciated, Google Classroom now supports mass grading functionality)*
 
 A mass input grading bot made for Google Classroom. 
 
